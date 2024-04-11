@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Hero() {
+export default function HeroPage() {
   return (
     <main className="h-full w-full flex justify-center items-center flex-col gap-6">
       <h1 className="text-6xl font-black text-blue-600">jordflix</h1>
