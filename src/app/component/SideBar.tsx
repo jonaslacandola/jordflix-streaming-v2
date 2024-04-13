@@ -14,13 +14,13 @@ const SideBar = forwardRef(function SideBar(
   return (
     <div
       ref={ref}
-      className="bg-slate-950 h-full w-1/2 p-2 flex flex-col justify-between"
+      className="bg-slate-950 h-full w-[40%] md:w-[25%] lg:w-[20%] xl:w-[15%] p-2 flex flex-col justify-between"
     >
       <div>
         <button onClick={handleClose}>
           <HiXMark className="text-xl" />
         </button>
-        <div className="flex flex-col text-center gap-2 text-sm">
+        <div className="flex flex-col text-center gap-2 text-sm lg:text-base">
           <Link href="/home">Home</Link>
           <Link href="/movies">Movies</Link>
           <Link href="/series">TV Series</Link>

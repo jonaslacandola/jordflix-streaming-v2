@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import type { Metadata } from "next";
 import { HiBars3 } from "react-icons/hi2";
 import { Suspense } from "react";
@@ -10,7 +10,10 @@ import FallBack from "./component/FallBack";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Jordflix - Watch HD Movies and TV Series for free",
@@ -26,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} h-screen grid grid-rows-[auto_1fr] bg-gradient-to-t to-slate-900 from-slate-950 text-slate-50`}
+        className={`${poppins.className} h-screen grid grid-rows-[auto_1fr] bg-gradient-to-t to-slate-900 from-slate-950 text-slate-50`}
       >
         <Modal>
           <nav className="flex justify-between items-center px-3 py-2">
