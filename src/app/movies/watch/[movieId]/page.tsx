@@ -42,7 +42,7 @@ export default async function WatchMoviePage({
         </h1>
         <section className="h-[300px] md:h-[350px] lg:h-[450px] xl:h-[550px]">
           <iframe
-            src={`https://vidsrc.xyz/embed/movie?tmdb=${movie.id}`}
+            src={`https://vidsrc.xyz/embed/movie/${movie.id}`}
             className="h-full w-full"
             allowFullScreen={true}
           ></iframe>

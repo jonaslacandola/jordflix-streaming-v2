@@ -21,7 +21,7 @@ export default async function HomePage() {
       <h1 className="text-xl xl:text-2xl">Trending movies</h1>
       <Suspense fallback={<Spinner />}>
         <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-          {movies.results.map((movie: any) => (
+          {movies?.results?.map((movie: any) => (
             <Card key={movie.id} media={movie} />
           ))}
         </div>
@@ -29,7 +29,7 @@ export default async function HomePage() {
       <h1 className="text-xl xl:text-2xl">Trending tv series</h1>
       <Suspense fallback={<Spinner />}>
         <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-          {series.results.map((tv: any) => (
+          {series?.results?.map((tv: any) => (
             <Card key={tv.id} media={tv} />
           ))}
         </div>
