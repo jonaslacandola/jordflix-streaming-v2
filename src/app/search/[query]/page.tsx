@@ -19,7 +19,7 @@ export default async function SearchPage({
       </h1>
       <Suspense fallback={<Spinner />}>
         <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-          {medias.results.map((media: any) => (
+          {medias?.results?.map((media: any) => (
             <CardSearch key={media.id} media={media} />
           ))}
         </div>

@@ -20,7 +20,7 @@ export default async function MoviesPage() {
       <h1 className="text-xl xl:text-2xl">Movies</h1>
       <Suspense fallback={<Spinner />}>
         <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-          {movies.results.map((movie: any) => (
+          {movies?.results?.map((movie: any) => (
             <CardMovie key={movie.id} movie={movie} />
           ))}
         </div>
