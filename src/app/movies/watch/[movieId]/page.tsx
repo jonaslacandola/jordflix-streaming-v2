@@ -15,12 +15,12 @@ export async function generateMetadata({
     description: movie?.overview,
     keywords,
     openGraph: {
-      title: `Watch ${movie?.title}. Available now on Jordflix`,
+      title: movie?.title,
       description: movie?.overview,
       images: `https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`,
     },
     twitter: {
-      title: `Watch ${movie?.title}. Available now on Jordflix`,
+      title: `Watch ${movie?.title} - Available now on Jordflix`,
       description: movie?.overview,
       images: `https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`,
     },

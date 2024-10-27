@@ -17,7 +17,7 @@ export async function generateMetadata({
     description: series?.overview,
     keywords,
     openGraph: {
-      title: `Stream ${series?.name}. Available now on Jordflix`,
+      title: series?.name,
       description: series?.overview,
       images: `https://image.tmdb.org/t/p/w500${series?.backdrop_path}`,
     },

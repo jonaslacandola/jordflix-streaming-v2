@@ -21,7 +21,7 @@ export async function generateMetadata({
       images: `https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`,
     },
     twitter: {
-      title: movie?.title,
+      title: `${movie?.title} - ${movie?.overview}`,
       description: movie?.overview,
       images: `https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`,
     },
