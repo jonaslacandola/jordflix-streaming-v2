@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function SeriesPage() {
   return (
-    <div className="h-full max-w-[400px] mx-auto overflow-scroll">
+    <div className="h-full py-5 max-w-[400px] mx-auto overflow-scroll">
       <p>Series Page</p>
     </div>
   );

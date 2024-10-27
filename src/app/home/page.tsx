@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Spinner from "../component/Spinner";
 import { getTrending } from "../lib/streamingAPI";
-import Card from "../component/Card";
 import { Suspense } from "react";
-import CardV2 from "../component/CardV2";
+import Card from "../component/Card";
 
 export const metadata: Metadata = {
   title: "Jordflix - Watch HD Movies and TV Series for free",
@@ -17,21 +16,21 @@ export default async function HomePage() {
   const { movies, series } = media;
 
   return (
-    <main className="h-full max-w-[400px] flex flex-col gap-4 mx-auto overflow-scroll md:max-w-[80%] lg:max-w-full">
-      <h1 className="text-lg">Home</h1>
-      <h1 className="text-lg font-semibold">Trending movies</h1>
+    <main className="h-full py-5 max-w-[400px] flex flex-col gap-4 mx-auto overflow-y-scroll md:max-w-[80%] lg:max-w-full xl:gap-8">
+      <h1 className="text-xl xl:text-2xl">Home</h1>
+      <h1 className="text-xl xl:text-2xl">Trending movies</h1>
       <Suspense fallback={<Spinner />}>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:gap-6">
+        <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {movies.results.map((movie: any) => (
-            <Card key={movie.id} movie={movie} />
+            <Card key={movie.id} media={movie} />
           ))}
         </div>
       </Suspense>
-      <h1 className="text-lg font-semibold">Trending tv series</h1>
+      <h1 className="text-xl xl:text-2xl">Trending tv series</h1>
       <Suspense fallback={<Spinner />}>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:gap-6">
+        <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {series.results.map((tv: any) => (
-            <CardV2 key={tv.id} tv={tv} />
+            <Card key={tv.id} media={tv} />
           ))}
         </div>
       </Suspense>

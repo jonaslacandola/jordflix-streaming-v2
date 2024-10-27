@@ -37,7 +37,7 @@ export async function getSeries() {
   return res.json();
 }
 //Get tv series by id
-export async function getTv(id: number) {
+export async function getTvSeries(id: number) {
   const res = await fetch(
     `https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.TMDB_API_KEY}`
   );
