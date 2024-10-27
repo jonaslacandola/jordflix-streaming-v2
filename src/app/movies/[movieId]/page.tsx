@@ -16,7 +16,7 @@ export async function generateMetadata({
     description: movie?.overview,
     keywords,
     openGraph: {
-      title: movie?.title,
+      title: `${movie?.title} - ${movie?.overview}`,
       description: movie?.overview,
       images: `https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`,
     },
