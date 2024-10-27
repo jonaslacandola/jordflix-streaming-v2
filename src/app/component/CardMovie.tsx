@@ -19,7 +19,9 @@ export default function CardMovie({ movie }: Readonly<{ movie: any }>) {
       <h1 className="mt-2 truncate">{movie?.title}</h1>
       <div className="flex justify-between text-[13px] text-blue-600">
         <div className="flex items-center gap-2">
-          <span>MOVIE</span>
+          <span className="uppercase rounded border border-blue-600 px-1 py-[2px] text-[12px]">
+            MOVIE
+          </span>
           <span>{release_year}</span>
         </div>
         <p className="flex items-center">

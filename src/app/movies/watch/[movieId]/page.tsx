@@ -36,7 +36,7 @@ export default async function WatchMoviePage({
   return (
     <div className="relative w-full overflow-hidden">
       <div className="w-full h-screen backdrop-blur-[8px] overflow-y-scroll m-auto pb-10 md:w-[80%] xl:w-[70%]">
-        <h1 className="text-center my-6 md:text-xl lg:text-2xl lg:my-8">
+        <h1 className="text-center my-6 md:text-lg lg:text-xl lg:my-8">
           Now watching,{" "}
           <span className="text-blue-600 font-semibold">{movie?.title}</span>
         </h1>

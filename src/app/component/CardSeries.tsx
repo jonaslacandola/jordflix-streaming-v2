@@ -19,7 +19,9 @@ export default function CardSeries({ series }: Readonly<{ series: any }>) {
       <h1 className="mt-2 truncate">{series?.name}</h1>
       <div className="flex justify-between text-[13px] text-blue-600">
         <div className="flex items-center gap-2">
-          <span>SERIES</span>
+          <span className="uppercase rounded border border-blue-600 px-1 py-[2px] text-[12px]">
+            SERIES
+          </span>
           <span>{release_year}</span>
         </div>
         <p className="flex items-center">

@@ -1,6 +1,6 @@
 "use client";
 
-import { HiArrowRightOnRectangle, HiXMark } from "react-icons/hi2";
+import { HiArrowLeftOnRectangle, HiHome, HiXMark } from "react-icons/hi2";
 import Link from "next/link";
 import { ForwardedRef, forwardRef } from "react";
 import { useModal } from "./Modal";
@@ -41,8 +41,8 @@ const SideBar = forwardRef(function SideBar(
           </Link>
         </div>
       </div>
-      <Link href="/">
-        <HiArrowRightOnRectangle className="text-xl" />
+      <Link href="/" className="p-4">
+        <HiHome className="text-2xl" />
       </Link>
     </div>
   );

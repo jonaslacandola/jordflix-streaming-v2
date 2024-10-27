@@ -1,4 +1,4 @@
-import { Inter, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import type { Metadata } from "next";
 import { HiBars3 } from "react-icons/hi2";
 import { Suspense } from "react";

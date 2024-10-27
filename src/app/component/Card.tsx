@@ -26,7 +26,7 @@ export default function Card({ media }: Readonly<{ media: any }>) {
       </h1>
       <div className="flex justify-between text-[13px] text-blue-600">
         <div className="flex items-center gap-2">
-          <span className="uppercase">
+          <span className="uppercase rounded border border-blue-600 px-1 py-[2px] text-[12px]">
             {media?.media_type === "tv" ? "series" : media?.media_type}
           </span>
           <span>{release_year}</span>
