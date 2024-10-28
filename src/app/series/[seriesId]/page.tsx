@@ -2,6 +2,7 @@ import Season from "@/app/component/Season";
 import { getTvSeries } from "@/app/lib/streamingAPI";
 import { Metadata } from "next";
 import Image from "next/image";
+import BackButton from "@/app/component/BackButton";
 
 export async function generateMetadata({
   params: { seriesId },
@@ -39,6 +40,7 @@ export default async function SeriesPage({
       <section className="relative h-[500px] w-full">
         <div className="backdrop-blur-[4px] h-full p-4 flex items-center">
           <div className="text-sm flex flex-col gap-4 max-w-[90%] md:max-w-[80%] mx-auto">
+            <BackButton/>
             <h1 className="text-3xl font-medium tracking-wide xl:text-5xl">
               {series?.name}
             </h1>
@@ -70,7 +72,7 @@ export default async function SeriesPage({
           src={`https://image.tmdb.org/t/p/w500${series?.backdrop_path}`}
           alt={series.title}
           fill
-          className="absolute top-0 object-cover w-full h-full z-[-2]"
+          className="absolute top-0 object-cover w-full h-full z-[-2] opacity-50"
         />
       </section>
 

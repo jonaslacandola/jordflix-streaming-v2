@@ -35,7 +35,7 @@ export default function RootLayout({
           <nav className="flex justify-between items-center px-3 py-2 border-b border-slate-800  xl:px-8">
             <Open window="sidebar">
               <button>
-                <HiBars3 className="text-2xl xl:text-3xl" />
+                <HiBars3 className="text-2xl lg:text-3xl" />
               </button>
             </Open>
             <SearchBar />

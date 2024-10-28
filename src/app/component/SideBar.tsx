@@ -37,7 +37,7 @@ const SideBar = forwardRef(function SideBar(
             href="/series"
             className="hover:bg-slate-900 px-4 py-2 rounded-md transition-all duration-300"
           >
-            TV Series
+            Series
           </Link>
         </div>
       </div>

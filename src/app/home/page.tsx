@@ -23,10 +23,10 @@ export default async function HomePage() {
   }));
 
   return (
-    <main className="h-full py-5 max-w-[400px] flex flex-col gap-4 mx-auto overflow-y-scroll md:max-w-[80%] lg:max-w-full xl:gap-8">
+    <main className="h-full py-5 flex flex-col gap-2 md:gap-4 mx-auto overflow-y-scroll md:max-w-[80%] lg:max-w-full xl:gap-8">
       <Slideshow images={topMoviePoster} />
-      <h1 className="text-xl xl:text-2xl">Home</h1>
-      <h1 className="text-xl xl:text-2xl">Trending Movies</h1>
+      <h1 className="text-lg lg:text-xl xl:text-2xl">Home</h1>
+      <h1 className="text-lg lg:text-xl xl:text-2xl">Trending Movies</h1>
       <Suspense fallback={<Spinner />}>
         <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {movies?.results?.map((movie: any) => (
@@ -34,7 +34,7 @@ export default async function HomePage() {
           ))}
         </div>
       </Suspense>
-      <h1 className="text-xl xl:text-2xl">Trending Series</h1>
+      <h1 className="text-lg lg:text-xl xl:text-2xl">Trending Series</h1>
       <Suspense fallback={<Spinner />}>
         <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {series?.results?.map((tv: any) => (

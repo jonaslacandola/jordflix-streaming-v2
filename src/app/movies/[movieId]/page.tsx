@@ -1,7 +1,9 @@
-import { getMovie } from "@/app/lib/streamingAPI";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+import { getMovie } from "@/app/lib/streamingAPI";
+import BackButton from "@/app/component/BackButton";
 
 export async function generateMetadata({
   params: { movieId },
@@ -39,12 +41,13 @@ export default async function MoviePage({
       <section className="relative h-[500px] w-full">
         <div className="backdrop-blur-[4px] h-full p-4 flex items-center">
           <div className="text-sm flex flex-col gap-4 max-w-[90%] md:max-w-[80%] mx-auto">
+            <BackButton/>
             <h1 className="text-3xl font-medium tracking-wide xl:text-5xl">
               {movie?.title}
             </h1>
             <Link
               href={`/movies/watch/${movie?.id}`}
-              className="text-blue-800 rounded-full self-start border px-4 py-2 animate-pulse hover:animate-none bg-blue-800 bg-opacity-50 border-blue-600 font-medium xl:text-base"
+              className="text-blue-600 rounded-full self-start border px-4 py-2 animate-pulse hover:animate-none bg-blue-800 bg-opacity-50 border-blue-600 font-medium xl:text-base"
             >
               Watch Now
             </Link>
@@ -74,7 +77,7 @@ export default async function MoviePage({
           src={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
           alt={movie.title}
           fill
-          className="absolute top-0 object-cover w-full h-full z-[-2]"
+          className="absolute top-0 opacity-50 object-cover w-full h-full z-[-2]"
         />
       </section>
     </main>

@@ -21,15 +21,15 @@ export default function Slideshow({
   }, [ref.current.length]);
 
   return (
-    <div className="relative aspect-[10/4] bg-slate-900 bg-opacity-50 transition-all duration-300 hover:bg-opacity-10">
-      <div className="w-full h-full flex flex-col justify-center items-center gap-4 lg:gap-6 backdrop-blur-sm">
-        <Link href={`/movies/watch/${ref.current[currentImage].id}`}>
+    <div className="relative aspect-[10/8] md:aspect-[12/6] lg:aspect-[10/4] bg-slate-900 bg-opacity-50 transition-all duration-300 hover:bg-opacity-10">
+      <div className="w-full h-full flex flex-col justify-center items-center gap-4 backdrop-blur-sm">
+        <Link href={`/movies/watch/${ref.current[currentImage].id}`} className="text-sm lg:text-base">
           {ref.current[currentImage].title}
         </Link>
         <h1 className="text-6xl font-black text-blue-600 xl:text-8xl">
           jordflix
         </h1>
-        <p className="uppercase">Watch hd movies and series for free</p>
+        <p className="text-[12px] lg:text-base uppercase">Watch hd movies and series for free</p>
       </div>
       <Image
         alt="Jordflix Slideshow"

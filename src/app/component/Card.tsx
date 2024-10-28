@@ -21,17 +21,17 @@ export default function Card({ media }: Readonly<{ media: any }>) {
           className="max-h-[300px] max-w-auto rounded-md"
         />
       </Link>
-      <h1 className="mt-2 truncate">
+      <h1 className="my-2 truncate text-sm lg:text-base">
         {media?.title ? media?.title : media?.name}
       </h1>
-      <div className="flex justify-between text-[13px] text-blue-600">
+      <div className="flex justify-between items-center text-[13px] text-blue-600">
         <div className="flex items-center gap-2">
-          <span className="uppercase rounded border border-blue-600 px-1 py-[2px] text-[12px]">
+          <span className="uppercase rounded border border-blue-600 px-1 py-[2px] text-[10px] lg:text-[12px]">
             {media?.media_type === "tv" ? "series" : media?.media_type}
           </span>
           <span>{release_year}</span>
         </div>
-        <p className="flex items-center">
+        <p className="flex items-center gap-1">
           <span>
             <HiThumbUp className="text-[13px]" />
           </span>
