@@ -20,8 +20,8 @@ export default async function SeriesPage() {
           <h1 className="text-xl xl:text-2xl">Series</h1>
           <Suspense fallback={<Spinner/>}>
               <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                  {series.results?.map((series: any) => (
-                      <CardSeries series={series} />
+                  {series.results?.map((tv: any) => (
+                      <CardSeries key={tv.id} series={tv} />
                   ))}
               </div>
           </Suspense>
