@@ -13,23 +13,28 @@ export default function Slideshow({
   useEffect(() => {
     const imageInterval = setInterval(() => {
       setCurrentImage((curr) =>
-        curr >= ref.current.length - 1 ? 0 : curr + 1
+        curr >= ref.current?.length - 1 ? 0 : curr + 1
       );
     }, 5000);
 
     return () => clearInterval(imageInterval);
-  }, [ref.current.length]);
+  }, [ref.current?.length]);
 
   return (
     <div className="relative aspect-[10/8] md:aspect-[12/6] lg:aspect-[10/4] bg-slate-900 bg-opacity-50 transition-all duration-300 hover:bg-opacity-10">
       <div className="w-full h-full flex flex-col justify-center items-center gap-4 backdrop-blur-sm">
-        <Link href={`/movies/watch/${ref.current[currentImage].id}`} className="text-sm lg:text-base">
+        <Link
+          href={`/movies/watch/${ref.current[currentImage].id}`}
+          className="text-sm lg:text-base"
+        >
           {ref.current[currentImage].title}
         </Link>
         <h1 className="text-6xl font-black text-blue-600 xl:text-8xl">
           jordflix
         </h1>
-        <p className="text-[12px] lg:text-base uppercase">Watch hd movies and series for free</p>
+        <p className="text-[12px] lg:text-base uppercase">
+          Watch hd movies and series for free
+        </p>
       </div>
       <Image
         alt="Jordflix Slideshow"
