@@ -3,7 +3,11 @@
 import { HiHome } from "react-icons/hi2";
 import { useRouter } from "next/navigation";
 
-export default function BackButton() {
+interface props {
+  text: string;
+}
+
+export default function BackButton({ text }: props) {
   const router = useRouter();
 
   function handleNavigateToHome() {
@@ -16,7 +20,7 @@ export default function BackButton() {
       onClick={handleNavigateToHome}
     >
       <HiHome className="text-xl" />
-      <p>Back to Home</p>
+      <p>{text}</p>
     </div>
   );
 }

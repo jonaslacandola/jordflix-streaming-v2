@@ -40,7 +40,7 @@ export default async function SeriesPage({
       <section className="relative h-[500px] w-full">
         <div className="backdrop-blur-[4px] h-full p-4 flex items-center">
           <div className="text-sm flex flex-col gap-4 max-w-[90%] md:max-w-[80%] mx-auto">
-            <BackButton/>
+            <BackButton text="Back to Home" />
             <h1 className="text-3xl font-medium tracking-wide xl:text-5xl">
               {series?.name}
             </h1>

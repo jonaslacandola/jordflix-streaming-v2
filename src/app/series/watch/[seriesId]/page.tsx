@@ -1,3 +1,4 @@
+import BackButton from "@/app/component/BackButton";
 import SeriesWatch from "@/app/component/SeriesWatch";
 import { getTvSeries } from "@/app/lib/streamingAPI";
 import { Metadata } from "next";
@@ -40,7 +41,10 @@ export default async function WatchSeriesPage({
   return (
     <div className="relative w-full overflow-hidden">
       <div className="w-full h-screen backdrop-blur-[8px] overflow-y-scroll m-auto pb-10 md:w-[90%]">
-        <h1 className="text-center my-6 md:text-lg lg:text-xl lg:my-8">
+        <div className="p-4">
+          <BackButton text="Back to Previous" />
+        </div>
+        <h1 className="text-center mb-6 md:text-lg lg:text-xl lg:mb-8">
           Now watching,{" "}
           <span className="text-blue-600 font-semibold">{series?.name}</span>
         </h1>
