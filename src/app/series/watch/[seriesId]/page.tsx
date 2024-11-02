@@ -39,25 +39,25 @@ export default async function WatchSeriesPage({
 
   return (
     <div className="relative w-full overflow-hidden">
-      <div className="w-full h-screen backdrop-blur-[8px] overflow-y-scroll m-auto pb-10 md:w-[80%] xl:w-[70%]">
+      <div className="w-full h-screen backdrop-blur-[8px] overflow-y-scroll m-auto pb-10 md:w-[90%]">
         <h1 className="text-center my-6 md:text-lg lg:text-xl lg:my-8">
           Now watching,{" "}
           <span className="text-blue-600 font-semibold">{series?.name}</span>
         </h1>
-        <section className="h-[300px] md:h-[350px] lg:h-[450px] xl:h-[550px]">
+        <section className="h-[340px] md:h-[440px] lg:h-[540px] xl:h-[640px]">
           <SeriesWatch seriesId={seriesId} />
         </section>
 
-        <div className="my-10 p-4 gap-8 flex justify-center items-center">
+        <div className="my-10 p-4 gap-8 mx-auto flex justify-center items-center w-[90%] md:w-[80%] xl:w-[70%]">
           <Image
             src={`https://image.tmdb.org/t/p/w500${series?.poster_path}`}
             alt={series?.name}
             width={500}
             height={500}
-            className="hidden lg:block max-h-auto max-w-[250px] rounded-md"
+            className="hidden md:block max-h-auto w-1/4 rounded-md"
           />
           <div className="text-sm flex flex-col gap-2 xl:gap-4">
-            <h1 className="text-2xl font-semibold tracking-wide xl:text-4xl">
+            <h1 className="text-2xl font-medium tracking-wide xl:text-4xl">
               {series?.name}
             </h1>
             <p className="flex gap-2 text-sm text-blue-600 font-medium xl:text-base">

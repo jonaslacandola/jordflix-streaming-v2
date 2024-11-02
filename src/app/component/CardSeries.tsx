@@ -6,7 +6,7 @@ export default function CardSeries({ series }: Readonly<{ series: any }>) {
   const release_year = series?.first_air_date?.split("-").at(0);
 
   return (
-    <div className="max-w-[180px]">
+    <div className="w-full md:w-[90%]">
       <Link href={`/series/${series?.id}`}>
         <Image
           src={`https://image.tmdb.org/t/p/w500/${series?.poster_path}`}

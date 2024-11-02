@@ -11,7 +11,7 @@ export default function Card({ media }: Readonly<{ media: any }>) {
   if (!media?.poster_path) return;
 
   return (
-    <div className="max-w-[180px]">
+    <div className="w-full md:w-[90%]">
       <Link href={`/${decodeURIComponent(path)}/${media?.id}`}>
         <Image
           src={`https://image.tmdb.org/t/p/w500/${media?.poster_path}`}

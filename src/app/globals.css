@@ -11,3 +11,8 @@
     )
     rgb(var(--background-start-rgb));
 } */
+
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

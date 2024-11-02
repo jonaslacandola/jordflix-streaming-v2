@@ -18,18 +18,18 @@ export default function Slideshow({
   }, [images?.length]);
 
   return (
-    <div className="relative aspect-[10/8] md:aspect-[12/6] lg:aspect-[10/4] bg-slate-900 bg-opacity-50 transition-all duration-300 hover:bg-opacity-10">
+    <div className="relative aspect-[12/8] md:aspect-[12/4] lg:aspect-[12/4] bg-slate-900 bg-opacity-50 transition-all duration-300 hover:bg-opacity-10">
       <div className="w-full h-full flex flex-col justify-center items-center gap-4 backdrop-blur-sm">
         <Link
           href={`/movies/watch/${images[currentImage].id}`}
-          className="text-sm lg:text-base"
+          className="text-[12px] lg:text-base"
         >
           {images[currentImage].title}
         </Link>
-        <h1 className="text-6xl font-black text-blue-600 xl:text-8xl">
+        <h1 className="text-4xl font-black text-blue-600 xl:text-8xl">
           jordflix
         </h1>
-        <p className="text-[12px] lg:text-base uppercase">
+        <p className="text-[10px] lg:text-base uppercase">
           Watch hd movies and series for free
         </p>
       </div>

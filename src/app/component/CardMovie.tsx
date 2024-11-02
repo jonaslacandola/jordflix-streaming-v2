@@ -6,7 +6,7 @@ export default function CardMovie({ movie }: Readonly<{ movie: any }>) {
   const release_year = movie?.release_date.split("-").at(0);
 
   return (
-    <div className="max-w-[180px]">
+    <div className="w-full md:w-[90%]">
       <Link href={`/movies/${movie?.id}`}>
         <Image
           src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}

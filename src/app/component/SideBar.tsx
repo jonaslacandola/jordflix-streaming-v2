@@ -13,10 +13,10 @@ const SideBar = forwardRef(function SideBar(
 
   return (
     <div
-      className="bg-slate-950 h-full w-[40%] md:w-[25%] lg:w-[20%] xl:w-[15%] p-2 flex flex-col justify-between"
+      className="bg-slate-950 h-full w-3/4 md:w-[25%] p-2 flex flex-col justify-between"
       ref={ref}
     >
-      <div className="flex flex-col gap-4 text-sm lg:text-base xl:gap-8">
+      <div className="flex flex-col gap-4 text-base md:text-lg xl:gap-8">
         <button onClick={close}>
           <HiXMark className="text-lg md:text-xl lg:text-2xl" />
         </button>
