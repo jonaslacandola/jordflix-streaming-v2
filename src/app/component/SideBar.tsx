@@ -1,6 +1,11 @@
 "use client";
 
-import { HiArrowLeftOnRectangle, HiHome, HiXMark } from "react-icons/hi2";
+import {
+  HiHome,
+  HiPlayCircle,
+  HiRectangleStack,
+  HiXMark,
+} from "react-icons/hi2";
 import Link from "next/link";
 import { ForwardedRef, forwardRef } from "react";
 import { useModal } from "./Modal";
@@ -23,21 +28,24 @@ const SideBar = forwardRef(function SideBar(
         <div className="w-full flex flex-col px-2 xl:px-4">
           <Link
             href="/home"
-            className={`hover:bg-slate-900 px-4 py-2 rounded-md transition-all duration-300`}
+            className={`hover:bg-slate-900 px-4 py-2 rounded-md transition-all duration-300 flex items-center gap-2 md:gap-4`}
           >
-            Home
+            <HiHome className="text-xl md:text-2xl" />
+            <span>Home</span>
           </Link>
           <Link
             href="/movies"
-            className="hover:bg-slate-900 px-4 py-2 rounded-md transition-all duration-300"
+            className="hover:bg-slate-900 px-4 py-2 rounded-md transition-all duration-300 flex items-center gap-2 md:gap-4"
           >
-            Movies
+            <HiPlayCircle className="text-xl md:text-2xl" />
+            <span>Movies</span>
           </Link>
           <Link
             href="/series"
-            className="hover:bg-slate-900 px-4 py-2 rounded-md transition-all duration-300"
+            className="hover:bg-slate-900 px-4 py-2 rounded-md transition-all duration-300 flex items-center gap-2 md:gap-4"
           >
-            Series
+            <HiRectangleStack className="text-xl md:text-2xl" />
+            <span>Series</span>
           </Link>
         </div>
       </div>
